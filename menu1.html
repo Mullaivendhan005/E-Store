@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Make sure styles.css exists in the same directory -->
+<style>
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgITqmh1NRqDAf1-Ekf65JUuK22UGkmt_2UA&usqp=CAU');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Mobiles</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu">
+        <h2>Menu</h2>
+        <div class="menu-item">
+            <img src="https://i.gadgets360cdn.com/products/large/realme-11-pro-realme-db-1-661x800-1683725640.jpg" alt="Burger" style="width:200px;height:250px;">
+		<h3>realme 11 Pro </h3>
+            <p style="font-size:20px;"><b><i>Octa core (2.6 GHz, Dual Core + 2 GHz, Hexa Core)<br>
+			MediaTek Dimensity 7050<br>
+			8 GB RAM<br>6.7 inches (17.02 cm)394 PPI, AMOLED120 Hz Refresh Rate<br>
+			100 MP + 2 MP Dual Primary CamerasLED Flash16 MP Front Camera<br>
+			5000 mAhSuper VOOC ChargingUSB Type-C Port<b><i><br>
+ <span style="color:red; font-size:20px;" > Starting from  25000 Only</span>
+            <button class="order-button" onclick="addToCart('realme 11 Pro ', 25000)">Order</button></p>
+            
+        </div>
+
+   
+ <div class="menu-item">
+            <img src="https://www.91-img.com/pictures/148095-v2-vivo-v29-mobile-phone-large-3.jpg?tr=h-271,c-at_max,q-80,pr-true" alt="Pizza" style="width:200px;height:250px;">
+            <h3>Vivo V29</h3>
+            <p style="font-size:20px;"><b><i>Dual Sim, 3G, 4G, 5G, VoLTE, Wi-Fi, NFC<br>
+Snapdragon 778G, Octa Core, 2.4 GHz Processor<br>
+8 GB RAM, 256 GB inbuilt<br>
+4600 mAh Battery with 80W Fast Charging<br>
+6.78 inches, 1260 x 2800 px, 120 Hz Display with Punch Hole<br>
+50 MP + 8 MP Dual Rear & 50 MP Front Camera<br>
+Android v13<b><i><br>
+<span style="color:red; font-size:20px;" >Starting from 30000 Only</span>
+            <button class="order-button" onclick="addToCart('Vivo V29', 30000)">Order</button></p>
+            </div>
+    
+        <div class="menu-item">
+            <img src="https://m.media-amazon.com/images/I/61FjNCLyI-L.jpg" alt="Chicken" style="width:200px;height:250px;">
+            <h3>OPPO A17</h3>
+            <p style="font-size:20px;"><b><i>MediaTek Helio G35 CPU Speed Cores8 cores, up to 2.3GHz GPU<br>
+		4890mAh/18.92Wh (Min) 5000mAh/19.35Wh (Typ)<br>
+		6.56 inches (16.66cm) Screen Ratio 89.8% Resolution HD+ (1612×720) Refresh Rate Maximum: 60Hz IMG GE8320 @ 680MHz<br>
+ColorOS 12.1<i><br>
+ <span style="color:red; font-size:20px;" >Starting from 15000 Only</span>
+            <button class="order-button" onclick="addToCart('OPPO A17', 15000)">Order</button></p>
+        </div>
+        
+
+<div class="menu-item">
+            <img src="https://cdn1.smartprix.com/rx-iuwYeMkkW-w1200-h1200/uwYeMkkW.jpg" alt="Beef" style="width:200px;height:250px;">
+            <h3>Samsung Galaxy S23 3</h3>
+            <p style="font-size:20px;"><b><i>6.10-inch<br>
+		Snapdragon 8 Gen 2<br>
+		12MP Rear Camera 50MP + 12MP + 10MP<br>
+		RAM:8GB Storage 128GB, 256GB <br>
+Battery Capacity 3,900mAh<br>
+OS Android 13<b><i><br>
+<span style="color:red; font-size:20px;" >Starting from 11000Only</span>
+            <button class="order-button" onclick="addToCart('Samsung Galaxy S23', 11000)">Order</button></p>
+             
+      </div>
+
+
+<div class="menu-item">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/products/41c99199-b220-4bc9-b0d3-629c7d81195922021323.jpg" alt="Beef" style="width:200px;height:250px;">
+            <h3>oneplus 10 pro 3</h3>
+            <p style="font-size:20px;"><b><i>6.10-inch<br>
+		Snapdragon 8 Gen 2<br>
+		12MP Rear Camera 50MP + 12MP + 10MP<br>
+		RAM:8GB Storage 128GB, 256GB <br>
+Battery Capacity 3,900mAh<br>
+OS Android 13<b><i><br>
+<span style="color:red; font-size:20px;" >Starting from 11000Only</span>
+            <button class="order-button" onclick="addToCart('oneplus 10 pro', 11000)">Order</button></p>
+             
+      </div>
+
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+        </ul>
+        <p>Total: <span id="cart-total">0.00</span></p>
+        <button class="order-button" onclick="placeOrder()">Place Order</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Food Delivery</p>
+    </footer>
+
+    <!-- JavaScript for Cart Functionality -->
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            total += price;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+            cartItems.innerHTML = "";
+            cart.forEach((item) => {
+                const li = document.createElement("li");
+                li.textContent = `${item.item} - ${item.price.toFixed(2)}`;
+                cartItems.appendChild(li);
+            });
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        function placeOrder() {
+            if (cart.length === 0) {
+                alert("Your cart is empty. Please add items to your cart before placing an order.");
+            } else {
+                alert(`Order placed! Total amount: $${total.toFixed(2)}`);
+                cart = [];
+                total = 0;
+                updateCart();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+     <link rel="stylesheet" href="styles.css">
+<style>
+ body {
+        background-image: url('https://media.istockphoto.com/id/941302930/vector/online-shopping-smartphone-turned-into-internet-shop-concept-of-mobile-marketing-and-e.jpg?s=612x612&w=0&k=20&c=oEaIaAVRL6w7juxEIVwFPISjW_XkoYbLmK_VRWjNaEk=');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+   }
+body {
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+}
+</style>
+</head>
+    <script>
+        function validate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if(username ==="mullai" && password ==="30mu") {
+                // If valid, redirect to the second page
+                window.location = "mainindex.html";
+            } else {
+                // If invalid, show an error message
+                alert("Invalid username or password!");
+            }
+        }
+    </script>
+
+<body>
+    <br><br><br><br><br><br><br><br>
+    <center>
+    <h1 style="color:black;"><b><i>Light Shop<b><i> <br>Login </h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+
+        <input type="button" value="Login" onclick="validate()">
+    </form>
+    <center>
+       
+
+</body>
+</html>

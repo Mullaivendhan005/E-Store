@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Make sure styles.css exists in the same directory -->
+<style>
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgITqmh1NRqDAf1-Ekf65JUuK22UGkmt_2UA&usqp=CAU');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Mobiles</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu">
+        <h2>Menu</h2>
+        <div class="menu-item">
+            <img src="C:\Users\mulla\OneDrive\Desktop\ex 5\New folder\2.webp"alt="Burger" style="width:200px;height:250px;">
+		<h3>Canon EOS 1500D 24.1MP DSLR Camera  </h3>
+            <p style="font-size:20px;"><b><i>DSLR
+24.1 MP Camera<br>
+1080p @ 30 fps FHD Video Recording<br>
+22.3 x 14.9 mm , APS-C inch CMOS Sensor<br>
+3 in, 920k dots, LCD Display<br>
+1/4000 sec Max Shutter Speed<br>
+35x Zoom, f/3.5-f/5.6 Aperture Lens<br>
+Wifi, Hdmi<b><i><br>
+ <span style="color:red; font-size:20px;" > Starting from  35000 Only</span>
+            <button class="order-button" onclick="addToCart('Canon EOS 1500D 24.1MP DSLR Camera ', 35000)">Order</button></p>
+            
+        </div>
+
+   
+ <div class="menu-item">
+            <img src="C:\Users\mulla\OneDrive\Desktop\ex 5\New folder\1.jpg" alt="Pizza" style="width:200px;height:250px;">
+            <h3>Canon PowerShot V10 15.2MP Vlog Camera</h3>
+            <p style="font-size:20px;"><b><i>Digital Compact
+20.9 MP Camera<br>
+4K @ 30 fps UHD Video Recording<br>
+1″ (13.2 x 8.8 mm) BSI-CMOS Sensor<br>
+2 in, 460k dots, Touch Screen Display<br>
+1/2000 sec Max Shutter Speed<br>
+1x Zoom Lens<br>
+Wifi, Hdmi<b><i><br>
+<span style="color:red; font-size:20px;" >Starting from 30000 Only</span>
+            <button class="order-button" onclick="addToCart('Canon PowerShot V10 15.2MP Vlog Camera', 30000)">Order</button></p>
+            </div>
+    
+        <div class="menu-item">
+            <img src="https://m.media-amazon.com/images/I/61FjNCLyI-L.jpg" alt="Chicken" style="width:200px;height:250px;">
+            <h3>Sony ZV-1F 20MP Compact Camera</h3>
+            <p style="font-size:20px;"><b><i>Compact
+20 MP Camera<br>
+4K @ 30 fps UHD Video Recording<br>
+1″ (13.2 x 8.8 mm) BSI-CMOS Sensor<br>
+3 in, 921.6k dots, LCD, Touch Screen Display<br>
+Program Auto (0.25 - 1/32000) / Manual (0.25 - 1/32000) / Aperture Priority (0.25 - 1/32…
+1x Zoom Lens<br>
+Wifi, Hdmi<i><br>
+ <span style="color:red; font-size:20px;" >Starting from 45000 Only</span>
+            <button class="order-button" onclick="addToCart('Sony ZV-1F 20MP Compact Camera', 45000)">Order</button></p>
+        </div>
+        
+
+
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+        </ul>
+        <p>Total: <span id="cart-total">0.00</span></p>
+        <button class="order-button" onclick="placeOrder()">Place Order</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Food Delivery</p>
+    </footer>
+
+    <!-- JavaScript for Cart Functionality -->
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            total += price;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+            cartItems.innerHTML = "";
+            cart.forEach((item) => {
+                const li = document.createElement("li");
+                li.textContent = `${item.item} - ${item.price.toFixed(2)}`;
+                cartItems.appendChild(li);
+            });
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        function placeOrder() {
+            if (cart.length === 0) {
+                alert("Your cart is empty. Please add items to your cart before placing an order.");
+            } else {
+                alert(`Order placed! Total amount: $${total.toFixed(2)}`);
+                cart = [];
+                total = 0;
+                updateCart();
+            }
+        }
+    </script>
+</body>
+</html>
